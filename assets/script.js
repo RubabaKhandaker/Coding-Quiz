@@ -83,3 +83,23 @@ function loadQuestion() {
 }
  
 loadQuestion();
+
+
+// Moves on to next question after answering
+function nextQuestion() {
+    if (currentQuest < Questions.length - 1) {
+        currentQuest++;
+        loadQuestion();
+    } else {
+        document.getElementById("optClass").remove()
+        document.getElementById("questClass").remove()
+        document.getElementById("submitBtn").remove()
+        loadScore();
+    }
+}
+
+// Loads score at the end of quiz
+function loadScore() {
+    const totalScore = document.getElementById("scores")
+    totalScore.textContent = ["You scored " + scores + "out of " + Questions.length + "."];
+}
