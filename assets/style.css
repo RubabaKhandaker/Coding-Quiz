@@ -25,13 +25,10 @@ body {
  
 .optClass {
     font-size: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    display: column;
     margin-top: 10px;
     margin-bottom: 20px;
     position: fixed;
-    top: 40%;
     left: 40%;
 }
  
