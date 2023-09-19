@@ -9,41 +9,18 @@ body {
     background-color: var(--light);
 }
  
-.questionsPanel {
-    margin-top: 8%;
+header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--dark);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 25px 0;
 }
- 
-.questClass {
-    font-size: 30px;
-    margin-bottom: 20px;
+
+.scores a,
+.timerClass {
+    font-size: 25px;
 }
- 
-.optClass {
-    font-size: 20px;
-    display: column;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    position: fixed;
-    left: 40%;
-}
- 
-button {
-    margin-right: 75px;
-    margin-top: 8%;
-    font-size: 20px;
-    padding: 10px 20px;
-    background-color: var(--main);
-    color: var(--light);
-    border: none;
-    cursor: pointer;
-}
- 
-#scores {
-    font-size: 30px;
+  
+.scores a {
     color: var(--main);
 }
