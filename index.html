@@ -5,6 +5,8 @@
   <head>
 
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz</title>
     <link rel="stylesheet" href ="./assets/reset.css"/>
     <link rel="stylesheet" href ="./assets/style.css"/>
@@ -33,10 +35,65 @@
           You have 75 seconds to answer a series of 5 coding-related questions! Answering incorrectly will result in a penalization of 10 seconds. Your total score at the end will be the remaining time left after you've answered all the questions. Are you ready? Click 'Start' to begin! 
       </p>
 
-      <div class="startButton">
+      <div class="controlButtons">
           <button class="startBtnClass" id="startBtnID">Start</button>
       </div>
 
+   </section>
+
+   <section class="hidden" id="questionsID">
+
+     <h1 id="questions">Question</h1>
+
+     <div class="answerButtonsClass" id="answerButtonsID">
+
+       <button class="button">Answer 1</button>
+       <button class="button">Answer 2</button>
+       <button class="button">Answer 3</button>
+       <button class="button">Answer 4</button>
+
+     </div>
+
+     <h2 class="answerCheckClass hidden" id="answerCheckID"></h2>
+
+     <div class="controlButtons">
+
+        <button class="nextButtonClass hidden" id="nextButtonID">Next</button>
+
+     </div>
+
+   </section>
+
+   <section class="hidden" id="scoresID">
+
+     <form id="submitFormID">
+
+        <h3 id="playerScoreID"></h3>
+        <label id="playerInitialsID">Enter your initials here to save your score to our leaderboard!</label>
+        <input type="text" id="initialsBoxID" maxlength="3" placeholder="Type your initials here, e.g. 'RK'"/>
+        <button id="submitButtonID">Submit</button>
+
+     </form>
+
+   </section>
+
+   <section class="highscoreSectionClass hidden" id="highscoreSectionID">
+
+     <div id="highscoresID">
+
+        <h1 class="centered">Leaderboard</h1>
+
+       <div class="highscoresClass highscoresListClass" id="highscoresListID"></div>
+
+       <div class="controlButtons">
+
+         <button id="restartButtonID">Restart</button>
+         <button id="clearButtonID">Clear Scores</button>
+
+       </div>
+
+     </div>
+    
    </section>
 
 
