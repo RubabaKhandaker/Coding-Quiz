@@ -2,11 +2,16 @@
     --light: rgb(242, 237, 246);
     --main: rgb(146, 55, 202);
     --dark: rgb(33, 30, 35);
+    --grey: rgb(137, 124, 147);
     --accent: rgb(255, 229, 113);
+    --right: rgb(33, 235, 144);
+    --wrong: rgb(235, 33, 93);
 }
 
 body {
     background-color: var(--light);
+    color: var(--dark);
+    font-family: Arial, Helvetica, sans-serif;
 }
  
 header {
@@ -23,4 +28,99 @@ header {
   
 .scores a {
     color: var(--main);
+}
+
+
+.startingPageID {
+    text-align: center;
+}
+  
+h1 {
+    margin-bottom: 10px;
+}
+  
+h2 {
+    color: var(--grey);
+    border-top: 1px solid var(--grey);
+    margin: 20px 0;
+    font-style: italic;
+    text-align: center;
+}
+  
+/* Answer button styling */
+.startBtnClass {
+    display: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* All buttons styling */
+button {
+    text-align: center;
+    border: none;
+    width: auto;
+    overflow: visible;
+    padding: 10px;
+    background-color: var(--main);
+    border-radius: 7px;
+    font-size: large;
+    margin: 10px;
+    color: var(--light);
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: var(--accent);
+    color: var(--dark);
+}
+  
+.hidden {
+    display: none;
+}
+  
+.button.correct {
+    background-color: var(--right);
+}
+  
+.button.wrong {
+    background-color: var(--wrong);
+}
+  
+/* Button Wrappers */
+.controlButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+  
+/* Initials box */
+input[type="text"] {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+/* Highscores Page */
+.highscoresClass {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+  
+.name-div,
+.score-div {
+    flex: 1 35%;
+    padding: 10px 0;
+    border: 1px solid var(--right);
+}
+  
+/* For mobile phones or smaller screens */
+@media screen and (max-width: 600px) {
+ .startBtnClass {
+      gap: 0;
+      margin: 0;
+ }
 }
