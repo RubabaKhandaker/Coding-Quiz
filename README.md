@@ -1,7 +1,7 @@
 # Coding Quiz
 
 ## Description
-![Screenshot of Deployed site.]()
+![Screenshot of Deployed site.](https://raw.githubusercontent.com/RubabaKhandaker/Coding-Quiz/main/assets/images/Coding-Quiz%20Screenshot.png)
 
 This is a coding quiz I have built that showcases some of the core skills I have learned in week 4 of the MONU coding bootcamp.
 
