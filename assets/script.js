@@ -186,3 +186,91 @@ function startQuiz() {
     timeCount();
     moveNextQuest();
 };
+
+// Function to make the start button trigger the first question and next button to display
+startButtonID.addEventListener("click", startQuiz);
+nextButtonID.addEventListener("click", () => {
+    presentQuestion++
+    moveNextQuest()
+});
+
+
+var loadScores = function () {
+    // Function to load scores from local storage
+
+    if (!savedScores) {
+        return false;
+    }
+
+    // Following code converts scores from the string field format into an array
+    savedScores = JSON.parse(savedScores);
+    var initials = document.querySelector("#initialsBoxID").value;
+    var latestScore = {
+        score: countdown,
+        initials: initials
+    }
+    savedScores.push(latestScore);
+    console.log(savedScores)                                               //risk
+
+    savedScores.forEach(score => {
+        playerInitials.innerText = score.initials
+        playerScores.innerText = score.score
+    })
+};
+
+
+// Function to display high scores
+function displayHighScores(initials) {
+    document.getElementById("highscoresListID").classList.remove("hidden")              //risk
+    document.getElementById("scoresID").classList.add("hidden");
+    startingPageIDEl.classList.add("hidden");
+    questionsIDEl.classList.add("hidden");
+    if (typeof initials == "string") {
+        var theScore = {
+            initials, countdown
+        }
+        scores.push(theScore)
+    }
+
+    var highScoreEl = document.getElementById("highscoresListID");
+    highScoreEl.innerHTML = "";
+
+    for (i = 0; i < scores.length; i++) {
+        var divOne = document.createElement("div");
+        divOne.setAttribute("class", "name-div");
+        divOne.innerText = scores[i].initials;
+        var divTwo = document.createElement("div");
+        divTwo.setAttribute("class", "score-div");
+        divTwo.innerText = scores[i].timeLeft;
+
+        highScoreEl.appendChild(divOne);
+        highScoreEl.appendChild(divTwo);
+    }
+
+    localStorage.setItem("scores", JSON.stringify(scores));
+
+};
+
+
+// Event listener to view link to high scores
+scoreView.addEventListener("click", displayHighScores);
+
+
+submitButtonID.addEventListener("click", function (event) {
+    event.preventDefault()
+    var initials = document.querySelector("#initialsBoxID").value;
+    displayHighScores(initials);
+});
+
+
+// Event listener to reload or restart the page
+restartButtonID.addEventListener("click", function () {
+    window.location.reload();
+});
+
+
+// Event listener to clear items in local storage
+clearButtonID.addEventListener("click", function () {
+    localStorage.clear();
+    document.getElementById("highscoresListID").innerHTML = "";
+});
