@@ -17,7 +17,7 @@ Some code inspired by given code in MONU Coding Bootcamp course.
 
 ## Contact
 
-Project Link: [rubabakhandaker.github.io/]()
+Project Link: [rubabakhandaker.github.io/Coding-Quiz](https://rubabakhandaker.github.io/Coding-Quiz/)
 
 ## License
 
