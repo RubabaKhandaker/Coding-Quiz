@@ -154,12 +154,12 @@ function answerSelect(e) {
 };
 
 // Function used to display question on page
-function questionDisplay(question) {
-    questionsEl.innerText = question.question
-    question.answers.forEach(answer => {
+function questionDisplay(Questions) {
+    questionsEl.innerText = Questions.Questions
+    Questions.answers.forEach(answer => {
         var button = document.createElement("button")
         button.innerText = answer.text
-        button.classList.add("button")                                        // risk
+        button.classList.add("btn")                                        // risk
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
